@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Recipe } from "./types";
+import { Recipe } from "../types";
 
 interface CardProps {
 	recipe: Recipe;

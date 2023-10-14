@@ -1,5 +1,5 @@
 import { Heart } from "lucide-react";
-import { Recipe } from "./types";
+import { Recipe } from "../types";
 import { useEffect, useState } from "react";
 
 interface FavoriteProps {

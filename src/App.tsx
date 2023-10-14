@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Card from "./Card";
+import Card from "./components/Card";
 import "./App.css";
 import { Heart } from "lucide-react";
-import Favorites from "./Favorites";
+import Favorites from "./components/Favorites";
 import { Recipe } from "./types";
 
 const APP_ID = "286f21ea";

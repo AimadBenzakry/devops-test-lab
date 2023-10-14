@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import FavoriteCard from "./FavoriteCard";
-import { Recipe } from "./types";
+import { Recipe } from "../types";
 
 interface FavoritesProps {
 	favoriteRecipes: Recipe[];
