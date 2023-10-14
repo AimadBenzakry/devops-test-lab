@@ -14,7 +14,9 @@ function App() {
 	const [recipes, setRecipes] = useState([]);
 
 	useEffect(() => {
-		const data = (JSON.parse(localStorage.getItem("favoriteRecipes") || "") || []) as Recipe[];
+		const data = (
+			localStorage.getItem("favoriteRecipes") ? JSON.parse(localStorage.getItem("favoriteRecipes") || "") : []
+		) as Recipe[];
 		setFavoriteRecipes(data);
 	}, []);
 
