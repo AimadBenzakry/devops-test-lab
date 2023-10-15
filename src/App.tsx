@@ -49,7 +49,9 @@ function App() {
 			</nav>
 			<section>
 				<div className="container initial">
-					<h1 className="brand">Recipe App</h1>
+					<h1 className="brand" data-testid="cypress-title">
+						Recipe App
+					</h1>
 					<form onSubmit={handleSubmit}>
 						<input type="text" placeholder="Search Your Recipe..." onChange={handleChange} />
 					</form>

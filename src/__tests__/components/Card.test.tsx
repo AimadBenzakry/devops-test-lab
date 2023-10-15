@@ -14,28 +14,6 @@ const mockRecipe: Recipe = {
 	dishType: ["pizza"],
 };
 
-test("renders Card component", () => {
-	render(<Card recipe={mockRecipe} favoriteRecipes={[]} setFavoriteRecipes={() => {}} />);
-
-	// Assert the presence of specific UI elements based on mock data
-	const recipeTitleElement = screen.getByText(mockRecipe.label);
-	const recipeImageElement = screen.getByAltText("img");
-	const caloriesElement = screen.getByText(`Calories: ${mockRecipe.calories.toFixed(2)}`);
-	const dietLabelElement = screen.getByText(`Diet label: ${mockRecipe.dietLabels[0]}`);
-	const dishTypeElement = screen.getByText(`Dish type: ${mockRecipe.dishType[0]}`);
-	const cuisineTypeElement = screen.getByText(`Cuisine type: ${mockRecipe.cuisineType[0]}`);
-
-	// Assert that all expected UI elements are present
-	expect(recipeTitleElement).toBeInTheDocument();
-	expect(recipeImageElement).toBeInTheDocument();
-	expect(caloriesElement).toBeInTheDocument();
-	expect(dietLabelElement).toBeInTheDocument();
-	expect(dishTypeElement).toBeInTheDocument();
-	expect(cuisineTypeElement).toBeInTheDocument();
-});
-
-/////////////////////////
-
 test("should render a card with the recipe information", () => {
 	render(<Card recipe={mockRecipe} favoriteRecipes={pizzaRecipes} setFavoriteRecipes={() => {}} />);
 	expect(screen.getByText("Margherita Pizza")).toBeInTheDocument();

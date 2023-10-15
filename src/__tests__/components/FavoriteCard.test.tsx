@@ -44,7 +44,7 @@ test("should be able to add a recipe to the favorites list", async () => {
 test("should be able to remove a recipe from the favorites list", async () => {
 	const mockSetFavoriteRecipes = vi.fn();
 
-	render(<FavoriteCard recipe={recipe} favoriteRecipes={pizzaRecipes} setFavoriteRecipes={mockSetFavoriteRecipes} />);
+	render(<FavoriteCard recipe={recipe} favoriteRecipes={[recipe]} setFavoriteRecipes={mockSetFavoriteRecipes} />);
 
 	const favoriteButton = screen.getByRole("button");
 
