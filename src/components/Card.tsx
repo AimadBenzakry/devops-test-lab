@@ -38,7 +38,7 @@ export default function Card({ recipe, favoriteRecipes, setFavoriteRecipes }: Ca
 			<img src={`${recipe.image}`} alt="img" />
 			<div className="margin-top-20 flex-container items-center">
 				<button onClick={handleClick} className="card-favorate-button">
-					<Heart color="red" fill={isFavorite ? "red" : "rgb(37, 37, 37)"} size={30} />
+					<Heart data-testid="heart-icon" color="red" fill={isFavorite ? "red" : "rgb(37, 37, 37)"} size={30} />
 				</button>
 				<a className="view-btn" target="_blank" href={`${recipe.url}`}>
 					View Recipe

@@ -4,7 +4,6 @@ export interface Recipe {
 	url: string;
 	calories: number;
 	dietLabels: string[];
-	healthLabels: string[];
 	cuisineType: string[];
 	dishType: string[];
 }
